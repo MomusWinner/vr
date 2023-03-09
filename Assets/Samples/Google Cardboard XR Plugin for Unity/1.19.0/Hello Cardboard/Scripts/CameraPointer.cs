@@ -17,6 +17,7 @@
 //-----------------------------------------------------------------------
 
 using System.Collections;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 /// <summary>
@@ -27,6 +28,15 @@ public class CameraPointer : MonoBehaviour
     private const float _maxDistance = 120;
     private GameObject _gazedAtObject = null;
 
+    [SerializeField]
+    private string maskName;
+
+    private LayerMask layerMask;
+
+    private void Start()
+    {
+        layerMask = 6;
+    }
     /// <summary>
     /// Update is called once per frame.
     /// </summary>
@@ -41,15 +51,18 @@ public class CameraPointer : MonoBehaviour
             if (_gazedAtObject != hit.transform.gameObject)
             {
                 // New GameObject.
-                _gazedAtObject?.SendMessage("OnPointerExit");
+                if (_gazedAtObject?.layer == layerMask)
+                    _gazedAtObject?.SendMessage("OnPointerExit");
                 _gazedAtObject = hit.transform.gameObject;
-                _gazedAtObject?.SendMessage("OnPointerEnter");
+                if (_gazedAtObject.layer ==layerMask)
+                    _gazedAtObject.SendMessage("OnPointerEnter");
             }
         }
         else
         {
             // No GameObject detected in front of the camera.
-            _gazedAtObject?.SendMessage("OnPointerExit");
+            if (_gazedAtObject?.layer == layerMask)
+                _gazedAtObject?.SendMessage("OnPointerExit");
             _gazedAtObject = null;
         }
 

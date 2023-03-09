@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 using System.Xml.Serialization;
 using UnityEngine.SceneManagement;
 
-public class ObjectInteraction : MonoBehaviour
+public class ObjectInteractionButton : MonoBehaviour
 {
     public Material InactiveMaterial;
 

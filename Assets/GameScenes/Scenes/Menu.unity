@@ -228,7 +228,7 @@ GameObject:
   - component: {fileID: 750940473}
   - component: {fileID: 750940475}
   - component: {fileID: 750940474}
-  m_Layer: 10
+  m_Layer: 6
   m_Name: Simple Example
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -243,7 +243,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 750940472}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 2.09}
+  m_LocalPosition: {x: 0, y: 0, z: 2.0900002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -252,7 +252,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.271, y: 0.927}
+  m_AnchoredPosition: {x: 0.27099997, y: 0.927}
   m_SizeDelta: {x: 3.6475, y: 1.0882}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &750940474
@@ -517,7 +517,7 @@ GameObject:
   - component: {fileID: 1241886678}
   - component: {fileID: 1241886682}
   - component: {fileID: 1241886684}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
