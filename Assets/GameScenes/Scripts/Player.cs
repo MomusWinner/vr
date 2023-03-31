@@ -7,7 +7,6 @@ public class Player : MonoBehaviour
     [SerializeField]
     private GameObject controller;
 
-
     private void Awake()
     {
         singaleton = this;

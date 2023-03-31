@@ -28,11 +28,10 @@ public class CameraPointer : MonoBehaviour
     private const float _maxDistance = 120;
     private GameObject _gazedAtObject = null;
 
-    [SerializeField]
-    private string maskName;
+    public Transform aim;
 
     private LayerMask layerMask;
-
+    
     private void Start()
     {
         layerMask = 6;
@@ -40,13 +39,17 @@ public class CameraPointer : MonoBehaviour
     /// <summary>
     /// Update is called once per frame.
     /// </summary>
+    ///
+
     public void Update()
     {
+        Debug.DrawRay(transform.position, transform.forward * 100f, Color.yellow);
         // Casts ray towards camera's forward direction, to detect if a GameObject is being gazed
         // at.
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.forward, out hit, _maxDistance))
         {
+            aim.position = hit.point;
             // GameObject detected in front of the camera.
             if (_gazedAtObject != hit.transform.gameObject)
             {
