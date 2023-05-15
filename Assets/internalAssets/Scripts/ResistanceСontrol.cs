@@ -26,7 +26,7 @@ public class ResistanceÑontrol : MonoBehaviour
     {
         resistance = (float)Math.Round(UnityEngine.Random.Range(0f,5f), 2);
 
-        text.text = $"{resistance} ìåíãà Îì";
+        text.text = $"{resistance} ìåãà Îì";
     }
 
     public void CheckAnswer(bool answer)
