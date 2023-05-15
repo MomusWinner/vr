@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4000013950294986}
   - component: {fileID: 205000012825781400}
   m_Layer: 0
-  m_Name: chainlink_group-1
+  m_Name: chainlink_group
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
